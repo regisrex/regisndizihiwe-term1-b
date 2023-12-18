@@ -3,7 +3,8 @@ package me.regisndizihiwe.regisndizihiweterm1b.calculator;
 import me.regisndizihiwe.regisndizihiweterm1b.exceptions.InvalidOperationException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MathOperatorImplTest {
 
@@ -45,6 +46,10 @@ public class MathOperatorImplTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void givenAnUnknownOperation_whenComputed_throwsRuntimeException() throws InvalidOperationException {
+        assertThrows(RuntimeException.class, () -> mathOperator.doMath(10, 5, "&"));
+    }
 
 
 }

@@ -86,16 +86,5 @@ public class MathControllerTest {
                 .andExpect(status().isNotAcceptable());
     }
 
-    @Test
-    public void should_throwRuntimeException() throws Exception {
-        when(mathOperatorMock.doMath(6, 6, "$")).thenThrow(new RuntimeException("Cannot divide by zero"));
-
-        DoMathRequest doMathRequest = new DoMathRequest(6, 6, "$");
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/math-operator/do-math")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content((new ObjectMapper()).writeValueAsString(doMathRequest)))
-                .andExpect(status().isInternalServerError());
-    }
-
 
 }
