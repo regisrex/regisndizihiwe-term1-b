@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path =  "api/v1/math-operator")
+@RequestMapping(path = "api/v1/math-operator")
 public class MathController {
     private final MathOperatorImpl mathOperator;
 
