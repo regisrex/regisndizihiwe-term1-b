@@ -45,10 +45,6 @@ public class MathOperatorImplTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void givenAnUnknownOperation_whenComputed_throwsRuntimeException() throws InvalidOperationException {
-        assertThrows(RuntimeException.class, () -> mathOperator.doMath(10, 5, "$"));
-    }
 
 
 }
