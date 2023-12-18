@@ -1,6 +1,6 @@
 ## Devops T1 Exam
-The tested code for the calc service. It contains the mathOperator and  its `unit`, `integration` and `e2e` tests.
-![ci](https://github.com/regisrex/regisndizihiwe-term1-b/actions/workflows/maven.yml)
+The tested code for the calc service. It contains the mathOperator and  its `unit`, `integration` and `e2e` tests. <br><br>
+![ci](https://github.com/regisrex/regisndizihiwe-term1-b/actions/workflows/maven.yml/badge.svg)
 ### Tools 
 - spring bot
 - junit
